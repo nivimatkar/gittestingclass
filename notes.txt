@@ -1,0 +1,328 @@
+for mobasrem
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+pwd :- bandit0
+
+
+cat id_ed25519.pub     gcp key
+
+
+GCP SSH: commans 
+Last login: Mon Sep 28 05:18:13 2026 from 35.235.241.50
+nivimatkar@niveditafirstvm:~$ sudo -i
+root@niveditafirstvm:~# ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/root/.ssh/id_ed25519): 
+Enter passphrase for "/root/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Passphrases do not match.  Try again.
+Enter passphrase for "/root/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Passphrases do not match.  Try again.
+Enter passphrase for "/root/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_ed25519
+Your public key has been saved in /root/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:sKXVFOhEWjPFBej5GjTNrFRPurI8kCYEaqtMjw63BPE root@niveditafirstvm
+The key's randomart image is:
++--[ED25519 256]--+
+|       .===+.    |
+|  .    o+=o .    |
+|.. .  o+o*.+     |
+|.+  .  *B = .    |
+|o E.  o+S+ .     |
+| +  . + + o      |
+|= =  o o =       |
+|o= o    =        |
+|...      .       |
++----[SHA256]-----+
+root@niveditafirstvm:~# 
+root@niveditafirstvm:~# 
+root@niveditafirstvm:~# cd /root/.ssh/
+root@niveditafirstvm:~/.ssh# ls
+authorized_keys  id_ed25519  id_ed25519.pub
+root@niveditafirstvm:~/.ssh# cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHDSy5m7y9wdgYCTCOxZNYd7uNoIU8df9YwHbezl3trh root@niveditafirstvm
+root@niveditafirstvm:~/.ssh#
+
+
+day 3 commands
+mkdir myfiles ; touch myfiles/{a.txt,b.txt,c.txt}
+
+tar -cvf allfiles.tar myfiles
+
+tar -xvf allfiles.tar
+
+
+
+1 ssh-keygen
+
+    2  uname -a
+
+    3  top
+
+    4  htop
+
+    5  uptime
+
+    6  last
+
+    7  df
+
+    8  df -h
+
+    9  pwd
+
+   10  du
+
+   11  ping www.google.com
+
+   12  who
+
+   13  w
+
+   14  whoami
+
+   15  ls
+
+   16  cd /var/log
+
+   17  ls
+
+   18  locate *.log
+
+   19  apt-get update 
+
+   20  apt install plocate
+
+   21  locate *.log
+
+   22  ls
+
+   23  locate *.log
+
+   24  find *.log
+
+   25  locate '*.log'
+
+   26  mkdir myfiles ; touch myfiles/{a.txt,b.txt,c.txt}
+
+   27  ls
+
+   28  ls myfiles
+
+   29  tar -cvf allfiles.tar myfiles
+
+   30  ls
+
+   31  tar -xvf allfiles.tar
+
+   32  adduser kishore 
+
+   33  su kishore
+
+   34  passwd kishore
+
+   35  usrdel kishore
+
+   36  userdel kishore
+
+   37  su kishore
+
+   38  addgroup devops45
+
+   39  getent group
+
+   40  adduser om
+
+   41  getent group
+
+   42  usermod -a -G devops45 om
+
+   43  getent group
+
+   44  chage
+
+   45  cd /etc/passwd
+
+   46  cd /etc/
+
+   47  ls
+
+   48  cat passwd
+
+   49  cat shadow
+
+   50  cat group
+
+   51  vi sudoers
+
+   52  history
+
+Here is the one-line summary of each command's purpose:
+
+ssh-keygen: Generates a new SSH key pair for secure, passwordless authentication.
+
+uname -a: Displays detailed system information, including OS name, hostname, and kernel version.
+
+top: Displays real-time system processes and resource usage (CPU, memory).
+
+htop: Provides an interactive, color-coded view of running processes and system resources.
+
+uptime: Shows how long the system has been running, active users, and system load averages.
+
+last: Displays a list of recently logged-in users and session details.
+
+df: Shows disk space usage for all mounted filesystems in default blocks.
+
+df -h: Displays disk space usage in human-readable format (e.g., GB, MB).
+
+pwd: Prints the absolute path of the current working directory.
+
+du: Displays estimated file and directory space usage.
+
+ping [www.google.com](https://www.google.com): Tests network connectivity and response time to Google's server.
+
+who: Displays users who are currently logged into the system.
+
+w: Shows logged-in users and what processes they are currently running.
+
+whoami: Prints the username of the currently active user.
+
+ls: Lists the files and directories inside the current directory.
+
+cd /var/log: Navigates into the /var/log system logs directory.
+
+ls: Lists files in the current /var/log directory.
+
+locate *.log: Searches the system database for files ending in .log (note: shell expands *.log first).
+
+apt-get update: Updates local package index files with the latest available repository versions.
+
+apt install plocate: Installs the plocate package for fast file searching using a cached database.
+
+locate *.log: Searches the plocate database for log files matching local directory patterns.
+
+ls: Lists files and directories in the working directory.
+
+locate *.log: Re-executes the log search via the locate database.
+
+find *.log: Searches the current directory for files matching .log extensions.
+
+locate '*.log': Searches the system database for all files ending in .log, passing the literal wildcard.
+
+mkdir myfiles ; touch myfiles/{a.txt,b.txt,c.txt}: Creates directory myfiles and three empty files inside it (a.txt, b.txt, c.txt).
+
+ls: Lists current directory content to verify myfiles folder creation.
+
+ls myfiles: Displays contents inside the myfiles directory.
+
+tar -cvf allfiles.tar myfiles: Creates an uncompressed archive named allfiles.tar containing the myfiles directory.
+
+ls: Lists directory contents to verify creation of allfiles.tar.
+
+tar -xvf allfiles.tar: Extracts the contents of allfiles.tar into the current working directory.
+
+adduser kishore: Interactively creates a new user account named kishore.
+
+su kishore: Switches the user session to user kishore.
+
+passwd kishore: Changes or sets the password for user kishore.
+
+usrdel kishore: Failed command attempt (misspelled userdel).
+
+userdel kishore: Deletes the system user account kishore.
+
+su kishore: Attempts to switch to user kishore (fails if user was successfully deleted).
+
+addgroup devops45: Creates a new user group named devops45.
+
+getent group: Lists all user groups defined in system databases.
+
+adduser om: Interactively creates a new system user named om.
+
+getent group: Displays system groups to review current group configurations.
+
+usermod -a -G devops45 om: Appends user om to the existing group devops45.
+
+getent group: Lists groups to verify om was added to devops45.
+
+chage: Displays usage instructions for changing user password expiration policies.
+
+cd /etc/passwd: Fails to change directory because /etc/passwd is a file, not a directory.
+
+cd /etc/: Navigates into the system configuration directory /etc.
+
+ls: Lists files and configuration directories inside /etc.
+
+cat passwd: Displays account and user profile details stored in /etc/passwd.
+
+cat shadow: Attempts to view encrypted password details in /etc/shadow (requires root privileges).
+
+cat group: Displays system group memberships and group IDs stored in /etc/group.
+
+vi sudoers: Opens the administrative privilege policy file in the vi text edito
+
+history: Outputs a numbered list of previously executed shell commands.
+
+
+aws login
+https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/users
+
+
+day 2 aws
+
+
+Instance ID
+
+i-092a059a343a17d39 (testec2instance)
+Key pair associated with this instance
+
+test1key
+Private key
+Either upload your private key file or copy and paste its contents into the field below.
+
+day 3 AWS
+
+cd /usr/share/nginx/html
+echo "i am CloudDevOpshub batch45 student " > index.html
+
+day4 aws
+
+In AWS, Role-Based Access Control (RBAC) is implemented using IAM roles, policies, and groups—permissions are assigned to roles based on job functions, and users inherit those permissions by being mapped to roles or groups. This ensures least privilege access and simplifies management across large environments.
+
+
+aws cconfigure
+aws sts get-caller-identity
+
+aws6
+
+aws7 21 oct
+AWS Billing Dashboard
+
+https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/
+
+View Your Current AWS bill
+
+https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/bills
+
+FREE Tier Utilization
+
+https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/freetier
+
+
+
+
+lambda -- 22 octomber terraform  projet
+
+https://github.com/CloudDevOpsHub/Image-Resizing-project-on-aws.git
+
+
+26 oct devops
+
+https://git-scm.com/install/windows
+
+https://github.com/nivimatkar/gittestingclass.git
+
+

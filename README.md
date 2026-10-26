@@ -1,2 +1,2 @@
 # gittestingclass
-new repo
+new repo niveita first commit
